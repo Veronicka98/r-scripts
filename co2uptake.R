@@ -1,0 +1,1 @@
+hist(CO2$uptake, right=FALSE, col=colors, main="CO2 uptake of plants", xlab="CO2 uptake rate(umol/m^2 sec)", ylab="Frequency")

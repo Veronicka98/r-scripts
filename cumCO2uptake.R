@@ -1,0 +1,10 @@
+uptake <- CO2$uptake
+breaks <- seq(0,50,by=5)
+uptake.cut <- cut(uptake, breaks, right=FALSE)
+uptake.freq <- table(uptake.cut)
+uptake.cumfreq = c(0, cumsum(uptake.freq))
+cbind(breaks, uptake.cumfreq)
+par(mfrow=c(1,1))
+plot(breaks, uptake.cumfreq, main="CO2 uptake distribution", xlab="CO2 uptake", ylab="Cumulative Freq")
+lines(breaks, uptake.cumfreq)
+grid()
